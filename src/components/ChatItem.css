@@ -1,0 +1,23 @@
+.chatitem{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+}
+.chatitem:hover{
+    color: white;
+    background-color: #3e93fd;
+}
+.chatitem__detail{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+.chatitem__detail > small{
+    position: absolute;
+    right: 5px;
+    top: 45%;
+}
