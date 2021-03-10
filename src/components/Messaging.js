@@ -9,12 +9,12 @@ import "./Messaging.css";
 
 const Messaging = props => {
     const [input, setInput] = useState("");
-
+    const { chatId } = props;
     useEffect(()=>{
-        if(props.chatId){
+        if(chatId){
             props.fetchMessage();
         }
-    }, [props.chatId]);
+    }, [chatId]);
 
     const onSubmit = (e) => {
         e.preventDefault();

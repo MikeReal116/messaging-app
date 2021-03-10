@@ -9,7 +9,7 @@ const ChatItem = (props) => {
     const [messageInfo, setMessageInfo] = useState([]);
 
     useEffect(()=>{
-        db.collection("chats").doc(props.id).collection("messages").onSnapshot(snapshot =>{
+        db.collection("chats").doc(props.id).collection("messages").orderBy("time", "desc")onSnapshot(snapshot =>{
             setMessageInfo(snapshot.docs.map(doc => doc.data()));
         })
 

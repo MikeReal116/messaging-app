@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import  { Avatar, IconButton } from "@material-ui/core";
 import SearchIcon from '@material-ui/icons/Search';
