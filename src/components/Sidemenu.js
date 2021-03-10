@@ -12,7 +12,6 @@ import "./Sidemenu.css";
 
 
 const Sidemenu = props =>{
-
     useEffect(()=>{
         props.fetchChat();
     }, []);
@@ -24,8 +23,12 @@ const Sidemenu = props =>{
         }  
     }
 
+    const getClassName = () =>{
+        let detail = document.querySelector(".sidemenu");
+        detail.classList.add("hidden-md-down")
+    }
     return (
-        <div className="sidemenu">
+        <div className="sidemenu" >
             <div className="sidemenu__header">
                 <Avatar className="sidemenu__avatar" src={props.user.photo} onClick={()=> auth.signOut()}/>
                 <div className="sidemenu__input">
@@ -36,9 +39,10 @@ const Sidemenu = props =>{
                     <AddIcon  />
                 </IconButton>
             </div>
-            <div className="sidemenu__chats">
+            
+            <div className="sidemenu__chats" onClick ={()=> getClassName()}>
                 {props.chats.map(( { id, data }) =>
-                    <div onClick={()=> props.selectedChat(id, data)}> <ChatItem chatName={data.chatName} key={id} id={id} /></div>
+                    <div onClick={()=> props.selectedChat(id, data) }> <ChatItem chatName={data.chatName} key={id} id={id}/></div>
                 )}
             </div>
             

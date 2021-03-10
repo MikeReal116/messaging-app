@@ -8,6 +8,7 @@ import { auth } from "../firebase";
 import { signIn, signOut } from "../actions";
 
 class App extends React.Component{
+
     componentDidMount(){
       auth.onAuthStateChanged(authUser=>{
         if(authUser){
@@ -33,7 +34,7 @@ class App extends React.Component{
       return <Login />
     }
   }
-
+  
     render(){
       return (
         <div className ="app">

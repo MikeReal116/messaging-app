@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import {Button} from "@material-ui/core";
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import Message from "./Message";
 import { addMessage, fetchMessage } from "../actions";
 import "./Messaging.css";
@@ -20,9 +21,15 @@ const Messaging = props => {
          props.addMessage(input);
         setInput(" ");
     }
+    const getClassName = () =>{
+        let detail = document.querySelector(".sidemenu");
+        detail.classList.remove("hidden-md-down")
+    }
+    
     return (
-        <div className="messaging">
+        <div className= "messaging">
             <div className="messaging__header">
+               <ArrowBackIcon className="messaging__icon" onClick ={getClassName}/>
                 {props.selected && <h4>{props.selected.chatName}</h4>}
                 <strong>Details</strong>
             </div>

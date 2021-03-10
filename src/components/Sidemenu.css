@@ -40,3 +40,13 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+@media only screen and (max-width:960px){
+    .sidemenu{
+        position: absolute;
+        z-index:11;
+        width: 100%;
+    }
+    .hidden-md-down{
+        display: none;
+    }
+}

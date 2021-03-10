@@ -17,6 +17,7 @@
     justify-content: center;
 }
 .chatitem__detail > small{
+    font-size: 12px;
     position: absolute;
     right: 5px;
     top: 45%;

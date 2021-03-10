@@ -30,6 +30,9 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+.messaging__icon{
+    display: none !important;
+}
 .messaging__input{
     display: flex;
     align-items: center;
@@ -51,4 +54,13 @@
 }
 .messaging__input > form > button{
     display: none;
+}
+@media only screen and (max-width: 960px){
+    .messaging{
+        width:100%
+    }
+    .messaging__icon{
+        display: block !important;
+    }
+    
 }
