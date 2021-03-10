@@ -42,7 +42,7 @@ const Sidemenu = props =>{
             
             <div className="sidemenu__chats" onClick ={()=> getClassName()}>
                 {props.chats.map(( { id, data }) =>
-                    <div onClick={()=> props.selectedChat(id, data) }> <ChatItem chatName={data.chatName} key={id} id={id}/></div>
+                    <div onClick={()=> props.selectedChat(id, data) } key={id}> <ChatItem chatName={data.chatName}  id={id}/></div>
                 )}
             </div>
             
